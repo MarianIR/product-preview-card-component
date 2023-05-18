@@ -1,0 +1,123 @@
+@import "reset", "variables";
+
+body {
+  background-color: $primaryColor2;
+}
+
+.main-section {
+  width: 90%;
+  max-width: 40rem;
+  height: auto;
+  margin: 5rem auto;
+  border-radius: 5%;
+  background-color: $neutralColor3;
+
+  @media (min-width: 668px) {
+    display: flex;
+    max-width: 70rem;
+  }
+
+  .parfume-image {
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    border-radius: 5% 5% 0 0;
+
+    @media (min-width: 668px) {
+      max-height: 100%;
+      background-image: url("./images/image-product-desktop.jpg");
+      max-width: 50%;
+      border-radius: 5% 0 0 5%;
+    }
+  }
+
+  .description {
+    display: block;
+    padding-bottom: 2rem;
+    .second-header {
+      padding: 2rem 2rem 1rem 2rem;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 0.5rem;
+      color: $neutralColor2;
+    }
+
+    .main-header {
+      padding: 1rem 2rem 1rem 2rem;
+      text-align: left;
+      font-size: clamp(2rem, 6vw, 3rem);
+      max-width: 90%;
+    }
+
+    .paragraph {
+      padding: 1rem 2rem 1rem 2rem;
+      text-align: left;
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.7rem;
+      font-size: 1.4rem;
+      max-width: 90%;
+      color: $neutralColor2;
+    }
+
+    .price {
+      padding: 1rem 2rem 1rem 2rem;
+      display: flex;
+      align-items: center;
+      .price-after-reduction {
+        font-size: 2.5rem;
+        color: $primaryColor1;
+      }
+
+      .price-before-reduction {
+        text-decoration: line-through;
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+        font-family: "Montserrat", sans-serif;
+        color: $neutralColor2;
+      }
+    }
+
+    .add-to-cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 90%;
+      padding: 1.2rem;
+      border: none;
+      border-radius: 1rem;
+      background-color: $primaryColor1;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $neutralColor1;
+        transition: 0.4s;
+      }
+      .shopping-cart {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      span {
+        padding: 0 1rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: $neutralColor3;
+      }
+    }
+  }
+}
+
+.attribution {
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-size: 1.5rem;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
